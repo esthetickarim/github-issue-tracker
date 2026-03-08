@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Issue Tracker Login</title>
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- DaisyUI CDN -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+
+<!-- Login Card -->
+<div class="card w-96 bg-white shadow-xl p-6">
+
+<h1 class="text-2xl font-bold text-center mb-2">GitHub Issues Tracker</h1>
+<p class="text-center text-gray-500 mb-4">Sign in to continue</p>
+
+<!-- Username Input -->
+<input 
+id="username"
+type="text"
+placeholder="Username"
+class="input input-bordered w-full mb-3"
+/>
+
+<!-- Password Input -->
+<input
+id="password"
+type="password"
+placeholder="Password"
+class="input input-bordered w-full mb-3"
+/>
+
+<!-- Sign In Button -->
+<button 
+onclick="login()"
+class="btn btn-primary w-full">
+Sign In
+</button>
+
+<!-- Demo Credential -->
+<p class="text-sm text-center mt-4 text-gray-500">
+Demo: admin / admin123
+</p>
+
+</div>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>
