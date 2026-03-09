@@ -33,6 +33,8 @@ color:white;
 /* Status Wrapper */
 .for-padding{
     padding-left: 20px;
+    display: flex;
+    gap: 10px;
 }
 
 /* Status Wrapper css closed */
