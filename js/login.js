@@ -1,22 +1,17 @@
-// This function runs when user clicks login button
+function login(){
 
-function login() {
+const username=document.getElementById("username").value;
+const password=document.getElementById("password").value;
 
-    // Get input values
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+if(username==="admin" && password==="admin123"){
 
-    // Check demo credential
-    if(username === "admin" && password === "admin123"){
+localStorage.setItem("login","true");
+window.location.href="dashboard.html";
 
-        // redirect to dashboard page
-        window.location.href = "dashboard.html";
+}else{
 
-    } else {
+alert("Invalid credentials");
 
-        // show error message
-        alert("Invalid login credentials");
-
-    }
+}
 
 }

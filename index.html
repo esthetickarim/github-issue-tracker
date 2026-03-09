@@ -1,53 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Issue Tracker Login</title>
-
-<!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- DaisyUI CDN -->
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
-
+<title>GitHub Issues Tracker</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-gray-100 flex justify-center items-center h-screen">
+<body class="login-body">
 
-<!-- Login Card -->
-<div class="card w-96 bg-white shadow-xl p-6">
+<div class="login-card">
 
-<img src="./B13-A5-Github-Issue-Tracker-main/assets/github-logo.png" alt="logo" class="mx-auto w-16 mb-2">
-<h1 class="text-2xl font-bold text-center mb-2">GitHub Issues Tracker</h1>
-<p class="text-center text-gray-500 mb-4">Sign in to continue</p>
+<h1>GitHub Issues Tracker</h1>
+<p>Sign in to manage your issues</p>
 
-<!-- Username Input -->
-<input 
-id="username"
-type="text"
-placeholder="Username"
-class="input input-bordered w-full mb-3"
-/>
+<input id="username" type="text" placeholder="Enter Username">
+<small>Default: admin</small>
 
-<!-- Password Input -->
-<input
-id="password"
-type="password"
-placeholder="Password"
-class="input input-bordered w-full mb-3"
-/>
+<input id="password" type="password" placeholder="Enter Password">
+<small>Default: admin123</small>
 
-<!-- Sign In Button -->
-<button 
-onclick="login()"
-class="btn btn-primary w-full">
-Sign In
-</button>
+<button onclick="login()">Sign In</button>
 
-<!-- Demo Credential -->
-<p class="text-sm text-center mt-4 text-gray-500">
-Demo: admin / admin123
-</p>
+<div class="demo">
+<h4>Demo Credentials</h4>
+<p>Username: admin</p>
+<p>Password: admin123</p>
+</div>
 
 </div>
 

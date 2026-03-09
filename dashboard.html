@@ -1,86 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
-<meta charset="UTF-8">
-<title>Issues Dashboard</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
-
+<title>Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-gray-100">
+<body>
 
-<!-- Navbar -->
-<div class="navbar bg-base-100 shadow-md">
+<nav>
 
-<div class="flex-1">
-<a class="text-xl font-bold">Issues Tracker</a>
-</div>
+<h2>All Issues</h2>
 
-<div class="flex-none gap-2">
+<div>
 
-<input
-id="searchInput"
-type="text"
-placeholder="Search"
-class="input input-bordered"
-/>
-
-<button onclick="searchIssues()" class="btn btn-primary">
-Search
-</button>
-
-</div>
-</div>
-
-<!-- Tabs -->
-<div class="flex justify-center gap-4 mt-6">
-
-<button class="btn btn-active" onclick="loadIssues()">
-All
-</button>
-
-<button class="btn" onclick="filterIssues('open')">
-Open
-</button>
-
-<button class="btn" onclick="filterIssues('closed')">
-Closed
-</button>
+<input id="searchInput" placeholder="Search issues">
+<button onclick="searchIssue()">Search</button>
 
 </div>
 
-<!-- Issues Container -->
-<div
-id="issuesContainer"
-class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-6"
->
+</nav>
 
-</div>
 
-<!-- Modal -->
-<dialog id="issueModal" class="modal">
+<section class="tabs">
 
-<div class="modal-box">
+<button id="allBtn" onclick="loadAll()" class="active">All</button>
+<button id="openBtn" onclick="loadOpen()">Open</button>
+<button id="closedBtn" onclick="loadClosed()">Closed</button>
 
-<h3 id="modalTitle" class="font-bold text-lg"></h3>
+</section>
 
-<p id="modalDescription" class="py-4"></p>
 
-<div class="modal-action">
-<form method="dialog">
-<button class="btn">Close</button>
-</form>
+<div class="issue-info">
+
+<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="40">
+
+<h3 id="issueCount">0 Issues</h3>
+
+<div>
+
+<button id="openCount">Open</button>
+<button id="closedCount">Closed</button>
+
 </div>
 
 </div>
 
-</dialog>
 
-<script src="js/issues.js"></script>
+<div id="spinner" class="spinner">Loading...</div>
+
+<div id="issuesContainer" class="grid"></div>
+
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<span onclick="closeModal()" class="close">&times;</span>
+
+<div id="modalData"></div>
+
+</div>
+
+</div>
+
+
+<script src="js/dashboard.js"></script>
 
 </body>
 </html>
