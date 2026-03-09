@@ -159,3 +159,34 @@ displayIssues(data.data);
 
 loadAll();
 
+// Open and Closed buttons make dynamic:
+function updateStatusCounts(issues){
+
+let open = 0;
+let closed = 0;
+
+issues.forEach(issue => {
+
+if(issue.status === "open"){
+open++;
+}
+
+if(issue.status === "closed"){
+closed++;
+}
+
+});
+
+document.getElementById("openCount").innerText = open;
+document.getElementById("closedCount").innerText = closed;
+
+}
+fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
+.then(res => res.json())
+.then(data => {
+
+displayIssues(data.data);
+
+updateStatusCounts(data.data);
+
+});
