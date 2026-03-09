@@ -10,6 +10,11 @@ justify-content:space-between;
 padding:20px;
 background:white;
 }
+.logo{
+width:80px;
+display:block;
+margin:0 auto 15px auto;
+}
 
 .tabs{
 padding:20px;
@@ -25,6 +30,44 @@ cursor:pointer;
 background:#6c3bff;
 color:white;
 }
+
+/* Open and closed Buttons css: */
+.status-container{
+display:flex;
+justify-content:flex-end;
+margin-top:10px;
+}
+
+.status-buttons{
+display:flex;
+gap:10px;
+}
+
+.status{
+padding:6px 15px;
+border-radius:20px;
+cursor:pointer;
+font-size:14px;
+display:flex;
+align-items:center;
+gap:5px;
+border:1px solid #ddd;
+}
+
+.status input{
+display:none;
+}
+
+.open{
+background:#e6f9f0;
+color:green;
+}
+
+.closed{
+background:#f2e6ff;
+color:purple;
+}
+/* Closed Open and Closed bts CSS */
 
 .grid{
 display:grid;

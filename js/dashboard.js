@@ -158,3 +158,4 @@ displayIssues(data.data);
 }
 
 loadAll();
+
