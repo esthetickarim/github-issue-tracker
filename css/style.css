@@ -30,6 +30,12 @@ cursor:pointer;
 background:#6c3bff;
 color:white;
 }
+/* Status Wrapper */
+.for-padding{
+    padding-left: 20px;
+}
+
+/* Status Wrapper css closed */
 
 /* Open and closed Buttons css: */
 .status-container{
